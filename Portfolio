@@ -1,0 +1,48 @@
+<h1 align="center">Hi there, I'm Achraf Kammoun 👋</h1>
+<h3 align="center">Computer Engineer | AI & Data Science Master's Student</h3>
+
+<p align="center">
+  <a href="mailto:achraf.kammoun@viacesi.com">📫 achraf.kammoun@viacesi.com</a> •
+  <a href="https://www.linkedin.com/in/achraf-kammoun-400862306/">🔗 LinkedIn</a> •
+  📍 Rouen, Normandy, France
+</p>
+
+---
+
+### 👤 About Me
+I am a Computer Engineering double-degree student currently pursuing a Master’s in **AI and Data Science** at CESI. I have a strong foundation in Industrial Automation, Computer Science, and software design. I'm passionate about building perception pipelines, predictive models, and embedded systems, and I'm actively seeking opportunities to contribute to challenging AI, data, and software projects.
+
+### 🛠️ Tech Stack & Skills
+- **Programming:** Python, C, C++, Java, SQL
+- **AI & Machine Learning:** Data Science, ETL, Data Modeling, YOLO, Predictive Modeling
+- **Tools & Platforms:** Power BI, Grafana, InfluxDB, ROS, Unity, Arduino, ESP32
+- **Systems & Domains:** Linux, Windows Admin, Networking, IoT, Embedded Systems
+
+### 🚀 Featured Projects
+
+* **YOLO-Based Door Perception (Research Project)** * Developed perception-to-action pipelines for autonomous door manipulation in mobile robots.
+  * *Tech:* YOLO detection, RGB-D refinement, LiDAR-based hinge localization, ROS motion planning.
+
+* **Smart Classroom Noise Monitoring**
+  * Built a smart noise monitoring system for classrooms using IoT sensors.
+  * *Tech:* InfluxDB, Grafana, Home Assistant.
+
+* **Cloud Healthcare Data Warehouse**
+  * Designed a secure healthcare decision-support system integrating medical and administrative data.
+  * *Tech:* PostgreSQL, Power BI, ETL pipelines, SQL.
+
+* **Employee Attrition Prediction** * Built Machine Learning models for predicting employee turnover with a focus on feature engineering and actionable HR recommendations.
+
+* **Smart Route Optimizer** * Developed a full Capacitated Vehicle Routing Problem (CVRP) solution using Genetic Algorithms achieving a <7% optimality gap.
+
+* **VR Glove** * Created a VR glove for real-time 3D interaction.
+  * *Tech:* Unity (C#), Arduino IDE, ESP32, C++.
+
+### 💼 Experience
+* **AI & VR Developer Intern** @ CGI Studio | *Jan 2024 - Apr 2024*
+* **Seasonal Worker** @ Métropole Rouen Normandie | *Dec 2025 - Present*
+
+### 🎓 Education
+* **Master's in AI & Data Science** - CESI, France *(Sep 2025 - Present)*
+* **Engineering Degree in Computer Science** - IIT, Tunisia *(Graduated 2024)*
+* **Bachelor's in Industrial Automation & CS** - ISGI, Tunisia *(Graduated 2024)*
