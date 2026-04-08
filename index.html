@@ -1,176 +1,149 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achraf Kammoun | AI & Data Science Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .tech-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); height: 100%; display: flex; flex-direction: column; }
-        .tech-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04); }
-    </style>
-</head>
-<body class="bg-gray-50 text-slate-900">
-
-    <nav class="fixed w-full z-50 glass border-b border-gray-200 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter text-blue-600">AK.DEV</span>
-            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#education" class="hover:text-blue-600 transition">Education</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="pt-32 pb-20 bg-slate-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="flex justify-center md:justify-end">
-                    <div class="relative group">
-                        <div class="absolute -inset-1 rounded-full bg-blue-500 blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                        <img src="image_0.png" alt="Profile Picture" class="relative w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-blue-500 shadow-xl object-cover hover:scale-105 transition-transform duration-300">
-                    </div>
-                </div>
-                <div class="text-center md:text-left">
-                    <span class="text-sm font-bold uppercase text-blue-400 tracking-widest">Available for Opportunities</span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 mt-2">Achraf Kammoun</h1>
-                    <p class="text-xl md:text-2xl text-blue-400 font-light italic mb-10">Computer Engineer | AI & Data Science Specialist</p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="mailto:achraf.kammoun@viacesi.com" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-bold transition flex items-center shadow-lg shadow-blue-500/30">
-                            <i class="fas fa-envelope mr-2"></i> Contact Me
-                        </a>
-                        <a href="https://www.linkedin.com/in/achraf-kammoun-400862306/" target="_blank" class="border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-full font-bold transition flex items-center">
-                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="projects" class="py-20 container mx-auto px-6">
+<section id="projects" class="py-20 container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center"><span class="border-b-4 border-blue-600">Portfolio Projects</span></h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-blue-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">Project Management</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CESI | Management</span>
+                        <span class="text-[10px] text-gray-400 font-mono">MAR 2026</span>
+                    </div>
                     <h3 class="text-xl font-bold my-2">Rouvray Clinic Digitalization</h3>
-                    <p class="text-gray-600 text-sm mb-4">Leading relocation and digital overhaul for 8,000 patients. Coordinating IT infra, HDS storage, and Doctolib integration.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Roadmap</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Stakeholders</span>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Leading relocation and digital overhaul for 8,000 patients. Designed EMR-based solutions with HDS-certified storage and KPI dashboards.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Project Management</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Doctolib</span>
                     </div>
+                    <a href="Digital Transformation of Rouvray Medical Clinic.pdf" class="text-xs font-bold text-blue-600 hover:underline"><i class="fas fa-file-pdf mr-1"></i> View Documentation</a>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">Research / AI</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CESI LINEACT | AI</span>
+                        <span class="text-[10px] text-gray-400 font-mono">FEB - MAR 2026</span>
+                    </div>
                     <h3 class="text-xl font-bold my-2">YOLO Door Perception</h3>
-                    <p class="text-gray-600 text-sm mb-4">Autonomous door manipulation for mobile robots using YOLO & LiDAR for CESI LINEACT research lab.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">State-of-the-art study on autonomous robotics. Transformed RGB-D and LiDAR data into actionable parameters for door manipulation.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">ROS</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">PyTorch</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">LiDAR</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">YOLO</span>
                     </div>
+                    <a href="Autonomous Door Opening for the Robot Spot.pdf" class="text-xs font-bold text-blue-600 hover:underline"><i class="fas fa-file-pdf mr-1"></i> View Research Paper</a>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">IoT / Analytics</span>
-                    <h3 class="text-xl font-bold my-2">Smart Classroom Monitor</h3>
-                    <p class="text-gray-600 text-sm mb-4">Real-time acoustic data pipeline from sensors to Grafana dashboards for campus comfort analysis.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">InfluxDB</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CESI | IoT</span>
+                        <span class="text-[10px] text-gray-400 font-mono">FEB - MAR 2026</span>
+                    </div>
+                    <h3 class="text-xl font-bold my-2">Smart Noise Monitor</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Built real-time acoustic analytics dashboards in Grafana. Used InfluxDB for time-series analysis of classroom comfort levels.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Grafana</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">InfluxDB</span>
                     </div>
+                    <a href="Esphome_noise_detection_presentation.pdf" class="text-xs font-bold text-blue-600 hover:underline"><i class="fas fa-file-pdf mr-1"></i> View Presentation</a>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">Big Data</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CESI | Big Data</span>
+                        <span class="text-[10px] text-gray-400 font-mono">JAN 2026</span>
+                    </div>
                     <h3 class="text-xl font-bold my-2">Healthcare Warehouse</h3>
-                    <p class="text-gray-600 text-sm mb-4">Secure decision-support system integrating medical activity and mortality indicators via ETL.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Power BI</span>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Designed secure ETL pipelines to analyze hospitalisation and mortality indicators using PostgreSQL and Power BI dashboards.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Data Warehouse</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">ETL</span>
                     </div>
+                    <a href="Data_WareHouse_presentation.pdf" class="text-xs font-bold text-blue-600 hover:underline"><i class="fas fa-file-pdf mr-1"></i> View Project Doc</a>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">AI / HR</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CESI | AI</span>
+                        <span class="text-[10px] text-gray-400 font-mono">DEC 2025</span>
+                    </div>
                     <h3 class="text-xl font-bold my-2">Employee Attrition AI</h3>
-                    <p class="text-gray-600 text-sm mb-4">ML models for turnover prediction using Scikit-learn, translating technical data into HR retention strategies.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">ML</span>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Identified attrition drivers through ML. Built classification models (F1-score/ROC-AUC) ensuring ethical data transparency.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Scikit-learn</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Ethical AI</span>
                     </div>
+                    <a href="AI_ML_Learning Presentation.pdf" class="text-xs font-bold text-blue-600 hover:underline"><i class="fas fa-file-pdf mr-1"></i> View ML Analysis</a>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">Infrastructure</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CESI | Systems</span>
+                        <span class="text-[10px] text-gray-400 font-mono">NOV 2025</span>
+                    </div>
                     <h3 class="text-xl font-bold my-2">GreenReso Secure IS</h3>
-                    <p class="text-gray-600 text-sm mb-4">Full logical architecture design and PowerShell automation for a secure IoT company infrastructure.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Architected a secure Information System for an IoT company. Implemented GPO strategies and HR PowerShell automation.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Active Directory</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Security</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Windows Server</span>
                     </div>
+                    <a href="Information Systems and Security.pdf" class="text-xs font-bold text-blue-600 hover:underline"><i class="fas fa-file-pdf mr-1"></i> View Security Guide</a>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">Optimization</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CESI | Algorithms</span>
+                        <span class="text-[10px] text-gray-400 font-mono">OCT - NOV 2025</span>
+                    </div>
                     <h3 class="text-xl font-bold my-2">Smart Route Optimizer</h3>
-                    <p class="text-gray-600 text-sm mb-4">Solving CVRP using Genetic Algorithms with <7% gap. Optimized for runtime performance.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Developed a Genetic Algorithm solution for the CVRP problem. Achieved a <7% optimality gap in under 160 seconds.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Algorithms</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Optimization</span>
                     </div>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">Hardware / VR</span>
-                    <h3 class="text-xl font-bold my-2">Custom VR Glove</h3>
-                    <p class="text-gray-600 text-sm mb-4">ESP32-based glove for real-time interaction in Unity environments. Built at CGI Studio.</p>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">CGI STUDIO | VR</span>
+                        <span class="text-[10px] text-gray-400 font-mono">JAN '23 - SEP '24</span>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Custom VR Glove</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">ESP32-based glove interface for Unity, allowing real-time interaction in immersive virtual environments.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">C++</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Unity</span>
+                        <span class="text-[10px] bg-blue-100 px-2 py-1 rounded text-blue-700 font-bold uppercase">Arduino</span>
+                        <span class="text-[10px] bg-blue-100 px-2 py-1 rounded text-blue-700 font-bold uppercase">Unity</span>
                     </div>
                 </div>
             </div>
 
             <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
                 <div class="p-6 flex-grow">
-                    <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">Web Dev</span>
-                    <h3 class="text-xl font-bold my-2">Web Portfolio</h3>
-                    <p class="text-gray-600 text-sm mb-4">Personal portfolio site built from scratch to showcase engineering and AI expertise.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">Tailwind</span>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase text-blue-600 tracking-widest bg-blue-50 px-2 py-1 rounded">IIT Tunisia | Web</span>
+                        <span class="text-[10px] text-gray-400 font-mono">PORTFOLIO</span>
+                    </div>
+                    <h3 class="text-xl font-bold my-2">Personal Portfolio</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Built from scratch using HTML and CSS to showcase technical engineering skills and project history.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] rounded-full">HTML/CSS</span>
                     </div>
+                    <a href="projet_web.pdf" class="text-xs font-bold text-blue-600 hover:underline"><i class="fas fa-file-pdf mr-1"></i> Project PDF</a>
                 </div>
             </div>
 
         </div>
     </section>
-
-    </body>
-</html>
