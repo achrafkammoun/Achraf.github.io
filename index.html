@@ -3,265 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACHRAF KAMMOUN // NEURAL INTERFACE</title>
+    <title>Achraf Kammoun | AI & Data Science Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --neon-blue: #00f2ff;
-            --neon-purple: #bc13fe;
-            --dark-bg: #030712;
-        }
-        body { 
-            font-family: 'Space Grotesk', sans-serif; 
-            background-color: var(--dark-bg);
-            color: #e5e7eb;
-            overflow-x: hidden;
-        }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        
-        /* Animated Background Mesh */
-        .mesh {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(188, 19, 254, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 0% 0%, rgba(0, 242, 255, 0.05) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        /* Cyberpunk Card Design */
-        .cyber-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        .cyber-card:hover {
-            border-color: var(--neon-blue);
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
-        }
-        .cyber-card::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0;
-            background: var(--neon-blue); transition: 0.5s;
-        }
-        .cyber-card:hover::before { height: 100%; }
-
-        /* Neon Glow Text */
-        .neon-text { text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); }
-        .neon-border { border: 1px solid var(--neon-blue); box-shadow: 0 0 15px rgba(0, 242, 255, 0.3); }
-
-        /* Scanning Animation */
-        @keyframes scan {
-            0% { top: 0%; }
-            100% { top: 100%; }
-        }
-        .scanner {
-            position: absolute; width: 100%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
-            animation: scan 3s linear infinite;
-            opacity: 0.3;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .tech-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
-<body class="selection:bg-cyan-500 selection:text-white">
-    <div class="mesh"></div>
+<body class="bg-gray-50 text-slate-900">
 
-    <nav class="fixed w-full z-50 py-6 px-10">
-        <div class="container mx-auto flex justify-between items-center cyber-card px-8 py-3 rounded-full border-blue-500/20">
-            <span class="text-2xl font-black tracking-tighter neon-text text-cyan-400 uppercase">Achraf.sys</span>
-            <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest mono">
-                <a href="#projects" class="hover:text-cyan-400 transition">Execute_Projects</a>
-                <a href="#skills" class="hover:text-cyan-400 transition">Core_Skills</a>
-                <a href="#experience" class="hover:text-cyan-400 transition">Logs</a>
-                <a href="mailto:achraf.kammoun@viacesi.com" class="text-cyan-400 border border-cyan-400/50 px-4 py-1 rounded hover:bg-cyan-400 hover:text-black transition">Contact</a>
+    <nav class="fixed w-full z-50 glass border-b border-gray-200 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter text-blue-600">AK.DEV</span>
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#education" class="hover:text-blue-600 transition">Education</a>
             </div>
         </div>
     </nav>
 
-    <header class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="relative">
-                <div class="mono text-cyan-500 mb-4 opacity-70">// INITIALIZING_BIOGRAPHY...</div>
-                <h1 class="text-7xl md:text-9xl font-extrabold tracking-tighter leading-none mb-6">
-                    ACHRAF <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">KAMMOUN</span>
-                </h1>
-                <p class="text-xl md:text-2xl font-light text-gray-400 max-w-lg mb-10 leading-relaxed">
-                    Engineering intelligence at the intersection of <span class="text-white border-b border-cyan-500">Robotics</span>, <span class="text-white border-b border-purple-500">AI</span>, and <span class="text-white border-b border-blue-500">Big Data</span>.
-                </p>
-                <div class="flex space-x-6">
-                    <div class="h-12 w-12 rounded-full neon-border flex items-center justify-center hover:bg-cyan-400 hover:text-black transition cursor-pointer">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                    <div class="h-12 w-12 rounded-full border border-gray-700 flex items-center justify-center hover:border-purple-500 hover:text-purple-500 transition cursor-pointer">
-                        <i class="fab fa-github"></i>
+    <header class="pt-32 pb-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center md:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 rounded-full bg-blue-500 blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                        <img src="image_0.png" alt="Achraf Kammoun Profile Picture" class="relative w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-blue-500 shadow-xl object-cover hover:scale-105 transition-transform duration-300">
                     </div>
                 </div>
-            </div>
 
-            <div class="relative flex justify-center lg:justify-end">
-                <div class="relative w-80 h-80 md:w-[500px] md:h-[500px]">
-                    <div class="absolute inset-0 border-[10px] border-cyan-500/10 rounded-full animate-pulse"></div>
-                    <div class="absolute inset-4 border border-purple-500/20 rounded-full rotate-45"></div>
-                    <img src="image_0.png" alt="Profile" class="absolute inset-10 w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700 z-10">
-                    <div class="scanner"></div>
+                <div class="text-center md:text-left">
+                    <span class="text-sm font-bold uppercase text-blue-400 tracking-widest">Available for Opportunities</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 mt-2">Achraf Kammoun</h1>
+                    <p class="text-xl md:text-2xl text-blue-400 font-light italic mb-10">Computer Engineer | AI & Data Science Specialist</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="mailto:achraf.kammoun@viacesi.com" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-bold transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Contact Me
+                        </a>
+                        <a href="https://www.linkedin.com/in/achraf-kammoun-400862306/" target="_blank" class="border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-full font-bold transition flex items-center">
+                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                        </a>
+                    </div>
+                    <p class="mt-10 text-gray-400 text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Rouen, Normandy, France</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="projects" class="py-32 container mx-auto px-6">
-        <div class="mb-20">
-            <h2 class="text-5xl font-bold uppercase mb-4">Current_Operations</h2>
-            <div class="h-1 w-32 bg-cyan-500"></div>
+    <section id="about" class="py-20 container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center"><span class="border-b-4 border-blue-600">Profile</span></h2>
+            <p class="text-lg leading-relaxed text-gray-600 text-center">
+                I am a Computer Engineering double-degree student at <strong>CESI Rouen</strong> and <strong>IIT Tunisia</strong>. 
+                My expertise lies at the intersection of <strong>Artificial Intelligence</strong>, <strong>Data Science</strong>, and <strong>Embedded Systems</strong>. 
+                With a strong background in Industrial Automation, I specialize in building smart perception pipelines, autonomous robotics solutions, and secure data infrastructures.
+            </p>
         </div>
+    </section>
 
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Technical Arsenal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border border-gray-100 rounded-2xl bg-gray-50 shadow-sm">
+                    <i class="fas fa-brain text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">AI & Data Science</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Machine Learning & YOLO</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Python, PyTorch, Scikit-learn</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Power BI & ETL Pipelines</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Data Modeling (SQL/PostgreSQL)</li>
+                    </ul>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-2xl bg-gray-50 shadow-sm">
+                    <i class="fas fa-code text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Software Engineering</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> C, C++, Java, OOP</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Web Dev (HTML/CSS/JS)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Linux & Windows Admin</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Docker & Git</li>
+                    </ul>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-2xl bg-gray-50 shadow-sm">
+                    <i class="fas fa-microchip text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">IoT & Robotics</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> ROS & Motion Planning</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> ESP32 & Arduino (C++)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> VR (Unity & C#)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Networking (CCNA)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Portfolio Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <div class="cyber-card p-8 rounded-tr-3xl">
-                <div class="flex justify-between mb-6">
-                    <i class="fas fa-hospital-user text-cyan-400 text-2xl"></i>
-                    <span class="mono text-[10px] text-gray-500 font-bold uppercase tracking-widest">Status: Active</span>
-                </div>
-                <h3 class="text-2xl font-bold mb-3">Rouvray Medical Digitalization</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Directing the €8k+ infrastructure migration for 8,000 patients. Implementing HDS-certified storage and automated IT roadmaps.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="text-[9px] mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded">MANAGEMENT</span>
-                    <span class="text-[9px] mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded">COMPLIANCE</span>
-                </div>
-                <a href="#" class="mono text-xs font-bold text-white group flex items-center">
-                    EXECUTE_DETAILS <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
-                </a>
-            </div>
-
-            <div class="cyber-card p-8">
-                <div class="flex justify-between mb-6">
-                    <i class="fas fa-robot text-purple-400 text-2xl"></i>
-                    <span class="mono text-[10px] text-gray-500 font-bold uppercase tracking-widest">CESI LINEACT</span>
-                </div>
-                <h3 class="text-2xl font-bold mb-3">YOLO Door Perception</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Autonomous door manipulation study for Spot robots. Advanced RGB-D and LiDAR sensor fusion for kinematic parameter extraction.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="text-[9px] mono bg-purple-500/10 text-purple-400 border border-purple-500/30 px-2 py-1 rounded">PYTORCH</span>
-                    <span class="text-[9px] mono bg-purple-500/10 text-purple-400 border border-purple-500/30 px-2 py-1 rounded">ROS</span>
-                </div>
-                <a href="#" class="mono text-xs font-bold text-white group flex items-center">
-                    READ_RESEARCH <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
-                </a>
-            </div>
-
-            <div class="cyber-card p-8 rounded-bl-3xl">
-                <div class="flex justify-between mb-6">
-                    <i class="fas fa-wave-square text-blue-400 text-2xl"></i>
-                    <span class="mono text-[10px] text-gray-500 font-bold uppercase tracking-widest">DATA_PIPELINE</span>
-                </div>
-                <h3 class="text-2xl font-bold mb-3">Smart Classroom Noise</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Converting raw IoT sensor measurements into real-time visual insights using InfluxDB and Grafana for campus comfort.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="text-[9px] mono bg-blue-500/10 text-blue-400 border border-blue-500/30 px-2 py-1 rounded">INFLUXDB</span>
-                    <span class="text-[9px] mono bg-blue-500/10 text-blue-400 border border-blue-500/30 px-2 py-1 rounded">IOT</span>
-                </div>
-                <a href="#" class="mono text-xs font-bold text-white group flex items-center">
-                    ACCESS_DASHBOARD <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
-                </a>
-            </div>
-
-            <div class="cyber-card p-8">
-                <h3 class="text-2xl font-bold mb-3">Healthcare Data Warehouse</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Secure decision-support architecture. Multi-source integration (PostgreSQL/FTP) for hospital mortality and activity analytics.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="text-[9px] mono bg-gray-500/10 text-gray-400 border border-gray-500/30 px-2 py-1 rounded">ETL</span>
-                    <span class="text-[9px] mono bg-gray-500/10 text-gray-400 border border-gray-500/30 px-2 py-1 rounded">BIG_DATA</span>
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">Leadership / PM</span>
+                    <h3 class="text-xl font-bold my-2">Rouvray Clinic Digitalization</h3>
+                    <p class="text-gray-600 text-sm mb-4">Led planning for clinic relocation serving 8,000 patients. Designed secure EMR solution with HDS storage and Doctolib integration.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Management</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">HDS Data</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cyber-card p-8 border-purple-500/30">
-                <h3 class="text-2xl font-bold mb-3">Employee Attrition ML</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">Predictive modeling for pharmaceutical turnover. High-precision F1-score evaluation with Ethical AI transparency implementation.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="text-[9px] mono bg-purple-500/10 text-purple-400 border border-purple-500/30 px-2 py-1 rounded">SCIKIT_LEARN</span>
-                    <span class="text-[9px] mono bg-purple-500/10 text-purple-400 border border-purple-500/30 px-2 py-1 rounded">PREDICTIVE</span>
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">Research / AI</span>
+                    <h3 class="text-xl font-bold my-2">YOLO Door Perception</h3>
+                    <p class="text-gray-600 text-sm mb-4">State-of-the-art study on autonomous door manipulation. Integrated RGB-D and LiDAR for 3D pose estimation and ROS planning.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">ROS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">PyTorch</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">OpenCV</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="cyber-card p-8">
-                <h3 class="text-2xl font-bold mb-3">Genetic Route Optimizer</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">CVRP solution utilizing Genetic Algorithms. Optimized for large-scale logistics with <7% optimality gap.</p>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="text-[9px] mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded">PYTHON</span>
-                    <span class="text-[9px] mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded">GA_ALGO</span>
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">IoT / Data</span>
+                    <h3 class="text-xl font-bold my-2">Smart Noise Monitor</h3>
+                    <p class="text-gray-600 text-sm mb-4">Real-time acoustic analysis pipeline. Stored sensor data in InfluxDB and built interactive Grafana dashboards for insights.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">InfluxDB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Grafana</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">IoT</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">Big Data</span>
+                    <h3 class="text-xl font-bold my-2">Healthcare Data Warehouse</h3>
+                    <p class="text-gray-600 text-sm mb-4">Built a secure decision-support system integrating medical activity, mortality, and patient satisfaction metrics.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">ETL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Power BI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">AI / Ethics</span>
+                    <h3 class="text-xl font-bold my-2">Employee Attrition AI</h3>
+                    <p class="text-gray-600 text-sm mb-4">ML turnover prediction using survey and work-hour data. Applied ethical AI principles for fairness and technical defense.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">ML Modeling</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Ethical AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">Robotics / Math</span>
+                    <h3 class="text-xl font-bold my-2">Smart Route Optimizer</h3>
+                    <p class="text-gray-600 text-sm mb-4">Developed Genetic Algorithm solution for CVRP with <7% optimality gap and under 160s runtime.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Genetic Algo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">IT / Security</span>
+                    <h3 class="text-xl font-bold my-2">GreenReso Infrastructure</h3>
+                    <p class="text-gray-600 text-sm mb-4">Designed secure Information System for IoT company. Automated AD setup and account creation with PowerShell scripts.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Active Directory</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">SysAdmin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">Hardware / VR</span>
+                    <h3 class="text-xl font-bold my-2">Custom VR Glove</h3>
+                    <p class="text-gray-600 text-sm mb-4">ESP32-based glove for real-time interaction in Unity. Created hardware-to-software environments for immersive VR.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">C++</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">Unity</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">ESP32</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-md tech-card border border-gray-100">
+                <div class="p-6">
+                    <span class="text-xs font-bold uppercase text-blue-600 tracking-widest">Web Dev</span>
+                    <h3 class="text-xl font-bold my-2">Portfolio Website</h3>
+                    <p class="text-gray-600 text-sm mb-4">Responsive personal portfolio showcasing projects and engineering skills using clean, modern code.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">HTML5</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded">CSS3</span>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="skills" class="py-32 bg-gray-900/30">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-20 uppercase tracking-tighter">System_Parameters</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div class="p-6 border border-gray-800 rounded-xl hover:border-cyan-500 transition">
-                    <i class="fab fa-python text-3xl text-cyan-400 mb-4"></i>
-                    <div class="text-xs font-bold uppercase mono">Python</div>
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">Professional Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex justify-between flex-wrap gap-2 mb-4">
+                        <h3 class="text-xl font-bold">AI & VR Developer Intern</h3>
+                        <span class="text-blue-600 font-bold italic">Jan 2024 – Apr 2024</span>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">CGI Studio | Tunisia (Remote)</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">Developed interactive applications, focusing on integrating hardware-to-software environments using Unity and C#. Built a functional VR glove interface.</p>
                 </div>
-                <div class="p-6 border border-gray-800 rounded-xl hover:border-cyan-500 transition">
-                    <i class="fas fa-database text-3xl text-cyan-400 mb-4"></i>
-                    <div class="text-xs font-bold uppercase mono">PostgreSQL</div>
-                </div>
-                <div class="p-6 border border-gray-800 rounded-xl hover:border-cyan-500 transition">
-                    <i class="fas fa-brain text-3xl text-cyan-400 mb-4"></i>
-                    <div class="text-xs font-bold uppercase mono">PyTorch</div>
-                </div>
-                <div class="p-6 border border-gray-800 rounded-xl hover:border-cyan-500 transition">
-                    <i class="fas fa-microchip text-3xl text-cyan-400 mb-4"></i>
-                    <div class="text-xs font-bold uppercase mono">ESP32/IoT</div>
-                </div>
-                <div class="p-6 border border-gray-800 rounded-xl hover:border-cyan-500 transition">
-                    <i class="fas fa-terminal text-3xl text-cyan-400 mb-4"></i>
-                    <div class="text-xs font-bold uppercase mono">Linux</div>
-                </div>
-                <div class="p-6 border border-gray-800 rounded-xl hover:border-cyan-500 transition">
-                    <i class="fab fa-docker text-3xl text-cyan-400 mb-4"></i>
-                    <div class="text-xs font-bold uppercase mono">Docker</div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex justify-between flex-wrap gap-2 mb-4">
+                        <h3 class="text-xl font-bold">Seasonal Student Job</h3>
+                        <span class="text-blue-600 font-bold italic">Dec 2025 – Present</span>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">Métropole Rouen Normandie | Rouen, France</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">Working seasonal student jobs alongside rigorous Master's degree studies.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 container mx-auto px-6 max-w-5xl">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <div>
-                <h3 class="text-3xl font-bold mb-10 text-cyan-400 tracking-tighter uppercase">Academic_Timeline</h3>
-                <div class="space-y-12 border-l border-gray-800 pl-8">
-                    <div class="relative">
-                        <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-cyan-500 shadow-[0_0_10px_#00f2ff]"></div>
-                        <h4 class="font-bold text-xl">MSc. AI & Data Science</h4>
-                        <p class="text-gray-500 mono text-sm mb-2">CESI Rouen, France // Present</p>
-                    </div>
-                    <div class="relative opacity-60">
-                        <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-gray-700"></div>
-                        <h4 class="font-bold text-xl">Engineering Degree in CS</h4>
-                        <p class="text-gray-500 mono text-sm mb-2">IIT Tunisia // 2024</p>
-                    </div>
-                </div>
+    <section id="education" class="py-20 container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-12 text-center">Academic Journey</h2>
+        <div class="space-y-12">
+            <div class="relative pl-8 border-l-2 border-blue-600">
+                <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-600"></div>
+                <h3 class="text-xl font-bold">Master’s Degree in AI and Data Science</h3>
+                <p class="text-blue-600 font-bold mb-2">CESI – Rouen, France | Sep 2025 – Present</p>
             </div>
-            <div>
-                <h3 class="text-3xl font-bold mb-10 text-purple-500 tracking-tighter uppercase">Professional_Logs</h3>
-                <div class="space-y-12 border-l border-gray-800 pl-8">
-                    <div class="relative">
-                        <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-purple-500 shadow-[0_0_10px_#bc13fe]"></div>
-                        <h4 class="font-bold text-xl">AI & VR Intern</h4>
-                        <p class="text-gray-500 mono text-sm mb-2">CGI Studio // 2024</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">Hardware-to-Software integration for VR immersive gloves using Unity.</p>
-                    </div>
+            <div class="relative pl-8 border-l-2 border-gray-300">
+                <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-gray-300"></div>
+                <h3 class="text-xl font-bold">Engineering Degree in Computer Science</h3>
+                <p class="text-gray-500 font-bold mb-2">Institut International de Technologie – Tunisia | 2024</p>
+            </div>
+            <div class="relative pl-8 border-l-2 border-gray-300">
+                <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-gray-300"></div>
+                <h3 class="text-xl font-bold">Bachelor’s in Industrial Automation & Computer Science</h3>
+                <p class="text-gray-500 font-bold mb-2">ISGI Sfax – Tunisia | 2021 – 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-6 border border-slate-700 rounded-xl hover:bg-slate-800 transition">
+                    <i class="fas fa-certificate text-blue-500 text-2xl mb-2"></i>
+                    <p class="font-bold">CCNA: Intro to Networks</p>
+                    <p class="text-sm text-slate-400">Cisco - 2025</p>
+                </div>
+                <div class="p-6 border border-slate-700 rounded-xl hover:bg-slate-800 transition">
+                    <i class="fas fa-language text-blue-500 text-2xl mb-2"></i>
+                    <p class="font-bold">DELF B2 French</p>
+                    <p class="text-sm text-slate-400">Institut français - 2025</p>
+                </div>
+                <div class="p-6 border border-slate-700 rounded-xl hover:bg-slate-800 transition">
+                    <i class="fas fa-award text-blue-500 text-2xl mb-2"></i>
+                    <p class="font-bold">Duolingo English</p>
+                    <p class="text-sm text-slate-400">Score Verified - 2025</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-gray-900">
-        <p class="text-gray-600 mono text-xs uppercase tracking-widest">System Offline // Achraf Kammoun &copy; 2026</p>
+    <footer class="py-12 bg-white text-center border-t border-gray-100">
+        <p class="text-gray-500 text-sm">© 2026 Achraf Kammoun.</p>
     </footer>
 
 </body>
